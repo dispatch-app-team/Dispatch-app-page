@@ -1,0 +1,13 @@
+.list h6 {
+    margin-bottom: 20px;
+}
+.top10listdata h2 {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.top10listdata {
+    position: sticky;
+    top: 100px;
+    right: 300px;
+    margin-top: 130px;
+}

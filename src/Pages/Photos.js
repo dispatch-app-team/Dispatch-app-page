@@ -16,14 +16,14 @@ const LocalPhotos = () => {
   return (
     <>
     <div className="container">
-      <div className="row">
+      <div className="photo-main">
         {photos &&
           photos.map((article, index) => (
-            <div key={index} className="col-md-4 mb-4">
+            <div key={index} className="photo-m1">
               <Link to={`/PhotosPage/${article.source.id}`} className="text-decoration-none">
-                <div className="">
-                  <img className="thumbnail" src={article.urlToImage} alt={article.title} />
-                  <h5 className="">{article.title}</h5>
+                <div className="photo-m2">
+                  <img className="photo-thumbnail" src={article.urlToImage} alt={article.title} />
+                  <h5 className="photo-title">{article.title}</h5>
                 </div>
               </Link>
             </div>

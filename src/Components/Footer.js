@@ -1,6 +1,7 @@
+import '../Styles/Footer.css';
 const Footer = () => {
     return (
-    <>
+    <div className='footer'>
     <p>개인정보취급방침 | 청소년보호정책 | ABOUT US</p>
     <hr/>
     <p>
@@ -12,7 +13,7 @@ const Footer = () => {
         무단 전재, 복사, 배포 등을 금합니다.<br/>
         이를 어길 시 법적 제재를 받을 수 있습니다.
     </p>
-    </>
+    </div>
 );
 }
 export default Footer;

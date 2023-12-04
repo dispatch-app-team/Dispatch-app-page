@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+}
+.Article-main h1 {
+    margin-bottom: 10px;
+}
+.detail {
+    margin-bottom: 5px;
+    color: rgb(155, 155, 155);
+}
+
+.Article-main img {
+    width: 800px;
+    margin-bottom: 40px;
+}
+.top10list {
+    margin-left: 50px;
+}

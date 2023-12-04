@@ -1,0 +1,25 @@
+.photo-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1100px;
+}
+.photo-thumbnail {
+    width: auto;
+    height: 400px;
+}
+.photo-m1 {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    position: relative;
+  
+}
+.photo-title {
+    padding: 5px 10px;
+	color: rgb(255, 255, 255);
+	text-align: left;
+	position: absolute;
+	top: 80%;
+    text-shadow: 1px 0 rgb(80, 80, 80), 0 2px rgb(80, 80, 80), 2px 0 rgb(80, 80, 80), 0 1px rgb(80, 80, 80);
+}
+
