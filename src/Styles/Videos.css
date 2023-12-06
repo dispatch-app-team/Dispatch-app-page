@@ -1,0 +1,56 @@
+/* Videos.css */
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.video-card > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-card > div > div {
+  flex: 0 0 50%;
+  padding: 10px;
+}
+
+.video-card a {
+  text-decoration: none;
+}
+
+.video-card div > div > a > div {
+  flex: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.video-card div > div > a > div > img {
+  width: 0%;
+  max-width: 100%;
+  justify-content: center;
+  height: auto;
+  border-radius: 0 8px 8px 0;
+}
+
+.video-card div > div > a > div > div {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-card div > div > a > div > div > h5 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.video-card div > div > a > div > div > p {
+  margin: 0;
+  font-size: 14px;
+}

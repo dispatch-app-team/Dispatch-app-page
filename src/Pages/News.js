@@ -25,7 +25,7 @@ const LocalNews = () => {
           news.map((article, index) => (
             <div key={index} className="col-md-4 mb-4">
               <Link to={`/ArticlePage/${article.source.id}`} className="text-decoration-none">
-                <div className="card">
+                <div className="card-main">
                   <img className="card-img-top thumbnail" src={article.urlToImage} alt={article.title} />
                   <div className="card-body">
                     <h5 className="card-title">{article.title}</h5>

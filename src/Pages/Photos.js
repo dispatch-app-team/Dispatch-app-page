@@ -1,3 +1,8 @@
+/*
+    FILE: News.js
+    작성자: 20212143 김채희
+    23.12.05
+*/
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";

@@ -1,0 +1,59 @@
+/* Top10.css */
+
+.article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 85%;
+  margin: auto;
+}
+.top-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #61a0d5;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+.card {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card > div {
+  flex: 1 0 calc(50% - 10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.card img {
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  height: auto;
+  border-radius: 0 8px 8px 0;
+}
+
+.card div {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h5 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card p {
+  margin: 0;
+  font-size: 14px;
+}

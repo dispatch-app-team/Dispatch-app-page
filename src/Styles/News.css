@@ -20,3 +20,7 @@
   padding-top: 40px;
   color: rgb(180, 177, 173);
 }
+.card-main {
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+}

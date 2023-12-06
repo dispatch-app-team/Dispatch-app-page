@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import "../Styles/Top10.css";
 
 const Top10 = () => {
   const [top10, setTop10] = useState([]);
@@ -14,16 +14,21 @@ const Top10 = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="row">
+      <div className="article">
+        <div className="card">
           {top10 &&
             top10.map((article, index) => (
-              <div>
+              <div className="card" key={index}>
+                <h5 className="top-label">{`TOP ${index + 1}`}</h5>
                 <img src={article.urlToImage} alt={article.title} />
                 <div>
                   <h5>{article.title}</h5>
-                  <p>{article.publishedAt}</p>
-                  <p>{article.author}</p>
+                  <p>
+                    {article.publishedAt} &nbsp;
+                    {article.author}
+                  </p>
+                  <br />
+
                   <p>
                     {article.content &&
                       article.content.split("\n").map((paragraph, index) => (
