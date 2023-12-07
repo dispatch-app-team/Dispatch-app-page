@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "../Styles/Top10.css";
+import "../Styles/Top10DataList.css";
 
 const Top10 = () => {
   const [top10, setTop10] = useState([]);
@@ -12,14 +14,30 @@ const Top10 = () => {
       .catch((error) => console.log(error));
   }, []);
 
+  const handleItemClick = (index) => {
+    const element = document.getElementById(`top-label-${index + 1}`);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div className="article">
         <div className="card">
           {top10 &&
             top10.map((article, index) => (
-              <div className="card" key={index}>
-                <h5 className="top-label">{`TOP ${index + 1}`}</h5>
+              <div className="card" key={`article-${index}`}>
+                <Link
+                  to={`/Top10#${index + 1}`}
+                  onClick={() => handleItemClick(index)}
+                  className="text-decoration-none"
+                >
+                  <h5
+                    id={`top-label-${index + 1}`}
+                    className="top-label"
+                  >{`TOP ${index + 1}`}</h5>
+                </Link>
                 <img src={article.urlToImage} alt={article.title} />
                 <div>
                   <h5>{article.title}</h5>
@@ -31,8 +49,8 @@ const Top10 = () => {
 
                   <p>
                     {article.content &&
-                      article.content.split("\n").map((paragraph, index) => (
-                        <span key={index}>
+                      article.content.split("\n").map((paragraph, idx) => (
+                        <span key={`paragraph-${index}-${idx}`}>
                           {paragraph}
                           <br />
                         </span>

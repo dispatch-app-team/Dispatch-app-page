@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import YouTube from "react-youtube";
 import "../Styles/Videos.css";
 
-const Video = () => {
+const Videos = () => {
   const opts = {
-    height: "400",
-    width: "640",
+    height: "300",
+    width: "500", //비디오 크기 여기서 변경
     playerVars: {
       autoplay: 1,
     },
@@ -27,9 +27,9 @@ const Video = () => {
   }
 
   const videosLines = videosChunks.map((videoChunk, lineIndex) => (
-    <div key={lineIndex} style={{ display: "flex", flexWrap: "wrap" }}>
+    <div key={lineIndex} className="video-line">
       {videoChunk.map((videoId, index) => (
-        <div key={index} style={{ flex: "0 0 50%", padding: "10px" }}>
+        <div key={index} className="video-box">
           <Link to={`/video/${videoId}`}>
             <YouTube videoId={videoId} opts={opts} onReady={_onReady} />
           </Link>
@@ -45,4 +45,4 @@ const Video = () => {
   }
 };
 
-export default Video;
+export default Videos;
