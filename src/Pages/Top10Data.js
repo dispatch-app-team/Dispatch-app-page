@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import '../Styles/Top10DataList.css';
 
-const LocalPhotos = () => {
+const LocalTop10 = () => {
   const [top10, settop10s] = useState([]);
 
   useEffect(() => {
@@ -34,4 +34,4 @@ const LocalPhotos = () => {
   );
 }
 
-export default LocalPhotos;
+export default LocalTop10;

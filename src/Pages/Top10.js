@@ -12,6 +12,11 @@ const Top10 = () => {
       .get("/data/top10-data/top10data.json")
       .then((response) => setTop10(response.data.articles))
       .catch((error) => console.log(error));
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleItemClick = (index) => {
@@ -19,6 +24,21 @@ const Top10 = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const handleScroll = () => {
+    const scrollButton = document.getElementById("scroll-to-top");
+    if (scrollButton) {
+      if (window.scrollY > 200) {
+        scrollButton.style.display = "block";
+      } else {
+        scrollButton.style.display = "none";
+      }
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -61,6 +81,9 @@ const Top10 = () => {
             ))}
         </div>
       </div>
+      <button id="button-top" onClick={scrollToTop}>
+        Top
+      </button>
     </>
   );
 };

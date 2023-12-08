@@ -24,8 +24,12 @@ const PhotosPage = () => {
       })
       .catch((error) => console.log(error));
   }, [id]);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
+    <>
     <div className="container">
       <div className="Article-main">
         <h1>{article.title}</h1>
@@ -34,7 +38,7 @@ const PhotosPage = () => {
           <p>{article.author}</p>
         </div>
         <hr/>
-        <img src={article.urlToImage}/>
+        <img src={article.urlToImage} alt={article.title}/>
         <p>{article.content && article.content.split('\n').map((paragraph, index) => (
           <span key={index}>
             {paragraph}
@@ -46,6 +50,10 @@ const PhotosPage = () => {
         <Top10Data/>
       </div>
     </div>
+    <button id="button-top" onClick={scrollToTop}>
+    Top
+    </button>
+    </>
   );
 }
 

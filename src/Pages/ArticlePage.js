@@ -24,8 +24,12 @@ const ArticlePage = () => {
       })
       .catch((error) => console.log(error));
   }, [id]);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
+    <>
     <div className="container">
       <div className="Article-main">
         <h1>{article.title}</h1>
@@ -46,6 +50,10 @@ const ArticlePage = () => {
         <Top10Data/>
       </div>
     </div>
+    <button id="button-top" onClick={scrollToTop}>
+    Top
+    </button>
+    </>
   );
 }
 

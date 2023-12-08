@@ -1,21 +1,25 @@
 import React from "react";
-
-const About = () => {
-  const a = () => {
-    return <p>이거 맞죠</p>;
-  };
-
-  const b = () => {
-    return <p>이거 맞죠?</p>;
-  };
-
+import NewsData from "./NewsData";
+import Top10Data from "./Top10Data";
+import PhotosData from "./PhotosData";
+import VideosData from "./VideosData";
+const Home = () => {
+   
   return (
+    <div className="container">
     <div>
-      {a()}
-      {b()}
+      <NewsData/>
+      <hr/>
+      <PhotosData/>
+      <hr/>
+      <VideosData/>
+    </div>
+    <div>
+      <Top10Data/>
+    </div>
     </div>
   );
 };
 
-export default About;
+export default Home;
 

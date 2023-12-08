@@ -1,0 +1,40 @@
+.newslistdata {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: rgba(146, 146, 146, 0.507);
+  }
+.newslistdata h2  {
+    font-weight: 800;
+    color: black;
+}
+  
+  .more-link {
+    font-weight: 600;
+  }
+  
+  .newslist {
+    display: flex;
+    justify-content: space-between;
+  }
+  .newslistmain {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .newslistmain img {
+    width: 400px;
+    height: 230px;
+    object-fit: cover; 
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .newslisttext h6 {
+    margin: 0;
+    font-weight:600;
+  }
+  
+
+  
